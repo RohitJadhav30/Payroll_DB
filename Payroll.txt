@@ -117,3 +117,50 @@ mysql> select * from employee_payroll;
 |  3 | Vaibhav Thete | 45000.00 | 2022-07-01 | M      |
 +----+---------------+----------+------------+--------+
 3 rows in set (0.00 sec)
+
+-----------------------------------------------------------------------------------------------------------------
+UC7 Using Database Functions
+
+mysql> select gender, sum(salary) as total_salary from employee_payroll group by gender;
++--------+--------------+
+| gender | total_salary |
++--------+--------------+
+| M      |    117000.00 |
+| F      |    105000.00 |
++--------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> select gender, avg(salary) as avg_salary from employee_payroll group by gender;
++--------+--------------+
+| gender | avg_salary   |
++--------+--------------+
+| M      | 39000.000000 |
+| F      | 52500.000000 |
++--------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> select gender, min(salary) as min_salary from employee_payroll group by gender;
++--------+------------+
+| gender | min_salary |
++--------+------------+
+| M      |   30000.00 |
+| F      |   50000.00 |
++--------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select gender, max(salary) as max_salary from employee_payroll group by gender;
++--------+------------+
+| gender | max_salary |
++--------+------------+
+| M      |   45000.00 |
+| F      |   55000.00 |
++--------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select gender, count(*) as total_count from employee_payroll group by gender;
++--------+-------------+
+| gender | total_count |
++--------+-------------+
+| M      |           3 |
+| F      |           2 |
++--------+-------------+
