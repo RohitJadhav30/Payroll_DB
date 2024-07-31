@@ -1,0 +1,33 @@
+//UC1 creating database
+
+mysql> create database payroll_service;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| addressbook        |
+| addressbookdb      |
+| advjava            |
+| exam               |
+| hibernate          |
+| information_schema |
+| interview          |
+| jobs               |
+| marvel             |
+| mysql              |
+| payroll_service    |
+| performance_schema |
+| pms                |
+| practice           |
+| practice1          |
+| railway            |
+| spring             |
+| sys                |
+| wjpexam            |
++--------------------+
+19 rows in set (0.01 sec)
+
+mysql> use payroll_service;
+Database changed
