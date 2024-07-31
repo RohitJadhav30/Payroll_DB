@@ -45,3 +45,21 @@ mysql> show tables;
 | employee_payroll          |
 +---------------------------+
 1 row in set (0.00 sec)
+
+-----------------------------------------------------------------------------------------------------------------
+//UC3 Insert data
+
+mysql> insert into employee_payroll(name, salary, start_date) values ('Rohit Jadhav', 30000.00, '2023-07-15'),('Gaurav D
+hande', 42000.00, '2023-04-1'),('Vaibhav Thete', 45000.00, '2022-07-1');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from employee_payroll;
++----+---------------+----------+------------+
+| id | name          | salary   | start_date |
++----+---------------+----------+------------+
+|  1 | Rohit Jadhav  | 30000.00 | 2023-07-15 |
+|  2 | Gaurav Dhande | 42000.00 | 2023-04-01 |
+|  3 | Vaibhav Thete | 45000.00 | 2022-07-01 |
++----+---------------+----------+------------+
+3 rows in set (0.00 sec)
