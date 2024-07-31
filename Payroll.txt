@@ -86,3 +86,34 @@ mysql> select * from employee_payroll where start_date between '2023-01-01' and 
 |  2 | Gaurav Dhande | 42000.00 | 2023-04-01 |
 +----+---------------+----------+------------+
 2 rows in set (0.00 sec)
+
+-----------------------------------------------------------------------------------------------------------------
+//UC6 Altering table
+
+mysql> alter table employee_payroll add column gender char(1);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from employee_payroll;
++----+---------------+----------+------------+--------+
+| id | name          | salary   | start_date | gender |
++----+---------------+----------+------------+--------+
+|  1 | Rohit Jadhav  | 30000.00 | 2023-07-15 | NULL   |
+|  2 | Gaurav Dhande | 42000.00 | 2023-04-01 | NULL   |
+|  3 | Vaibhav Thete | 45000.00 | 2022-07-01 | NULL   |
++----+---------------+----------+------------+--------+
+3 rows in set (0.00 sec)
+
+mysql> update employee_payroll set gender = 'M' where id in(1,2,3);
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select * from employee_payroll;
++----+---------------+----------+------------+--------+
+| id | name          | salary   | start_date | gender |
++----+---------------+----------+------------+--------+
+|  1 | Rohit Jadhav  | 30000.00 | 2023-07-15 | M      |
+|  2 | Gaurav Dhande | 42000.00 | 2023-04-01 | M      |
+|  3 | Vaibhav Thete | 45000.00 | 2022-07-01 | M      |
++----+---------------+----------+------------+--------+
+3 rows in set (0.00 sec)
